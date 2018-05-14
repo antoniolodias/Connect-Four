@@ -90,7 +90,6 @@ body {
     justify-content: center;
 
     top: 10px;
-    /* z-index: 10; */
 
     width: 50px;
     height: 50px;
@@ -106,7 +105,6 @@ body {
 .startOver {
     position: absolute;
     top: 100%;
-    /* right: -100%; */
     width: 700px;
     height: 70px;
     background-color: white;
@@ -119,7 +117,6 @@ body {
     justify-content: center;
 
     top: 10px;
-    /* z-index: 10; */
 
     width: 50px;
     height: 50px;
@@ -171,7 +168,6 @@ body {
     justify-content: center;
 
     top: 10px;
-    /* z-index: 10; */
 
     width: 50px;
     height: 50px;
@@ -192,15 +188,4 @@ body {
 .slot.PLAYER-2.winnerClass .hole {
     background-image: url("pic2.jpg");
     background-size: cover;
-}
-
-div.slot {
-}
-
-.slot.PLAYER-1 .hole {
-    /* //when they are connected the element NEEDS to have both classes
-    background-color: darkblue; // the space makes it a child class */
-}
-
-.slot.PLAYER-2 .hole {
 }
