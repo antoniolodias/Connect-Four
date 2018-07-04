@@ -15,7 +15,7 @@
     start.on("click", function() {
         startPanel.css("left", "100%");
         startOver.css("top", "25px");
-        column.on("click", game); //CLICK ON TO START GAME FUNCTION
+        column.on("click", game);
         column.on("mouseenter", mousteE);
         column.on("mouseleave", mouseL);
         $(".slot").removeClass("winnerClass");
@@ -34,8 +34,8 @@
     });
 
     function game(e) {
-        // put the function alone and named so you can call it with different click events
-        var slotsInColumn = $(e.currentTarget).find(".slot"); //e.currentTarget reaches the container of the target// find() finds
+
+        var slotsInColumn = $(e.currentTarget).find(".slot");
 
         for (var i = 5; i >= 0; i--) {
             if (!slotsInColumn.eq(i).hasClass("PLAYER-1")) {
@@ -47,7 +47,7 @@
 
         slotsInColumn.eq(i).addClass(curPlayer);
 
-        var slotsInRow = $(".row" + i); // needs to be here because the i wasnt specified before
+        var slotsInRow = $(".row" + i);
 
         if (
             checkVictory(slotsInColumn) ||
@@ -67,7 +67,6 @@
             }
         }
 
-        // to track the player
         if (curPlayer == "PLAYER-1") {
             curPlayer = "PLAYER-2";
             lightColor = "lightYellow";
@@ -85,8 +84,6 @@
         $("input").val("");
     });
 
-    // ----------------------------------------------------------
-    // MOUSE EVENTS
     function mousteE(e) {
         $(e.currentTarget).addClass(lightColor);
     }
@@ -95,7 +92,6 @@
         $(e.currentTarget).removeClass("lightYellow");
     }
 
-    // ----------------------------------------------------------
 
     function checkVictory(slots) {
         var counter = 0;
@@ -106,12 +102,12 @@
                     column.removeClass("lightTomato");
                     column.removeClass("lightYellow");
                     column.off("mouseenter");
-                    column.off("click"); // off event prevent things from working
+                    column.off("click");
                     slots.eq(i).addClass("winnerClass");
                     slots.eq(i - 1).addClass("winnerClass");
                     slots.eq(i - 2).addClass("winnerClass");
                     slots.eq(i - 3).addClass("winnerClass");
-                    return true; // DONT WRITE AFTER RETURN BECAUSE IT WONT WORK
+                    return true;
                 }
             } else {
                 counter = 0;
@@ -159,12 +155,12 @@
                     column.removeClass("lightTomato");
                     column.removeClass("lightYellow");
                     column.off("mouseenter");
-                    column.off("click"); // off event prevent things from working
+                    column.off("click");
                     slots.eq(i).addClass("winnerClass");
                     slots.eq(i + 7).addClass("winnerClass");
                     slots.eq(i + 14).addClass("winnerClass");
                     slots.eq(i + 21).addClass("winnerClass");
-                    return true; // DONT WRITE AFTER RETURN BECAUSE IT WONT WORK
+                    return true;
                 }
             } else if (
                 slots.eq(i).hasClass(curPlayer) &&

@@ -181,11 +181,11 @@ body {
 }
 
 .slot.PLAYER-1.winnerClass .hole {
-    background-image: url("pic2.jpg");
+    background-image: url("pic2.png");
     background-size: cover;
 }
 
 .slot.PLAYER-2.winnerClass .hole {
-    background-image: url("pic2.jpg");
+    background-image: url("pic2.png");
     background-size: cover;
 }
