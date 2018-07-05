@@ -4,4 +4,4 @@ The Classic 2 players game.
 ## Preview
 (It might take a minute to load)
 
-![alt text](/demo.png")
+![alt text](https://media.giphy.com/media/iNLs1TZvxreSDFd0yP/giphy.gif)
